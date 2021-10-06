@@ -1,0 +1,218 @@
+.card {
+  background-color: $white;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  padding: 22px 0 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.cards-list {
+  @include reset-ul();
+}
+
+.card-wrapper img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+
+.card-name {
+  @include set-Roboto-normal();
+  font-size: 10px;
+  line-height: 12px;
+  color: $braun;
+  margin-right: 3px;
+}
+
+.card-time {
+  @include set-Roboto-normal();
+  font-size: 10px;
+  line-height: 12px;
+  color: $grey99;
+}
+
+.card-title {
+  @include set-Roboto-normal();
+  font-size: 16px;
+  line-height: 19px;
+  color: $primary;
+  margin-bottom: 13px;
+  padding: 0 20px;
+  margin-top: 5px;
+}
+
+.card-image {
+  width: 100%;
+  min-height: 128px;
+}
+
+.footer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.wrapper-like {
+  display: flex;
+}
+
+.likes-count,
+.comments-count {
+  @include set-Roboto-medium();
+  font-size: 12px;
+  line-height: 14px;
+  color: $greyC4;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.comments-count span:last-child {
+  display: none;
+}
+
+.btn-shared {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.comments-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  alignment: center;
+}
+
+.card-time span {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .card-image {
+    width: 190px;
+    height: 107px;
+    border-radius: 3px;
+  }
+
+  .card-content {
+    display: flex;
+    order: 1;
+    position: relative;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .card-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .footer-card {
+    order: 3
+  }
+
+  .card-title {
+    order: 1;
+    display: flex;
+    padding: 0;
+    padding-left: 38px;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .card-header {
+    order: 2;
+  }
+
+  .card-control {
+    display: none;
+  }
+
+  .ellipsis {
+    position: absolute;
+    right: 100px;
+    top: 70px;
+    transform: rotate(90deg);
+  }
+
+  .wrapper-like {
+    position: absolute;
+    right: 40px;
+    top: 47px;
+    flex-direction: column;
+  }
+
+  .likes-count {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 0;
+    margin: 0;
+    color: $primary;
+  }
+
+  .comments-wrapper {
+    position: absolute;
+    left: 267px;
+    bottom: 15px;
+  }
+
+  .card-time {
+    order: -1;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 17px;
+  }
+
+  .card-time span {
+    display: inline;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .card-name {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .comments-count span:last-child {
+    display: inline;
+    font-size: 14px;
+    line-height: 16px;
+    color: $braun;
+  }
+  .comments-count span:first-child{
+    display: none;
+  }
+
+  .icon-comments {
+    fill: $braun;
+    width: 14.17px;
+    height: 14.17px;
+  }
+
+  .card-wrapper img {
+    margin-left: 5px;
+  }
+
+}

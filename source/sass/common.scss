@@ -1,26 +1,12 @@
 @font-face {
-  font-family: "PTMono";
-  src: url("../fonts/ptmono.woff2") format("woff2"), url("../fonts/ptmono.woff") format("woff");
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
   font-weight: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-display: swap;
-  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto-Condensed-Normal";
-  font-display: swap;
-  src: url("../fonts/Roboto-Condensed.woff2") format("woff2"), url("../fonts/Roboto-Condensed.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto-Condensed-Bold";
-  font-display: swap;
-  src: url("../fonts/Roboto-Condensed-Bold.woff2") format("woff2"), url("../fonts/Roboto-Condensed-Bold.woff") format("woff");
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -45,3 +31,22 @@ img {
   height: auto;
 }
 
+h1 {
+  @include set-Roboto-normal();
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+body {
+  background-color: $greyF4;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}

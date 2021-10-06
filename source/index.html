@@ -4,29 +4,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Smart Device</title>
-  <link rel="preload" href="fonts/ptmono.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Roboto.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Roboto-Condensed.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Roboto-Condensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <title>Личный кабинет</title>
+  <link rel="preload" href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap' as="font"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
   <link href="css/style.min.css" rel="stylesheet">
-<!--  <link href="pixelPerfect/pixel-glass/styles.css" rel="stylesheet">-->
-<!--  <link href="pixelPerfect/index.css" rel="stylesheet">-->
-<!--  <script src="pixelPerfect/pixel-glass/script.js"></script>-->
-<!--   // Picturefill -->
-<!--  <script>-->
-<!--    // Picture element HTML5 shiv-->
-<!--    document.createElement("picture");-->
-<!--  </script>-->
-<!--  <script src="js/picturefill.min.js" async=""></script>-->
-<!--  &lt;!&ndash; // Picturefill &ndash;&gt;-->
-<!--  &lt;!&ndash; // Polyfill &ndash;&gt;-->
-<!--&lt;!&ndash;  <script src="js/svg4everybody.min.js"></script>&ndash;&gt;-->
-<!--&lt;!&ndash;  <script>svg4everybody(); // run it now or whenever you are ready</script>&ndash;&gt;-->
-<!--&lt;!&ndash;  &lt;!&ndash; // Polyfill &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;  <link rel="stylesheet" href="css/style.min.css">&ndash;&gt;-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  </style>
+  <!--  <link href="pixelPerfect/pixel-glass/styles.css" rel="stylesheet">-->
+  <!--  <link href="pixelPerfect/index.css" rel="stylesheet">-->
+  <!--  <script src="pixelPerfect/pixel-glass/script.js"></script>-->
+  <!--   // Picturefill -->
+  <!--  <script>-->
+  <!--    // Picture element HTML5 shiv-->
+  <!--    document.createElement("picture");-->
+  <!--  </script>-->
+  <!--  <script src="js/picturefill.min.js" async=""></script>-->
+  <!--  &lt;!&ndash; // Picturefill &ndash;&gt;-->
+  <!--  &lt;!&ndash; // Polyfill &ndash;&gt;-->
+  <!--&lt;!&ndash;  <script src="js/svg4everybody.min.js"></script>&ndash;&gt;-->
+  <!--&lt;!&ndash;  <script>svg4everybody(); // run it now or whenever you are ready</script>&ndash;&gt;-->
+  <!--&lt;!&ndash;  &lt;!&ndash; // Polyfill &ndash;&gt;&ndash;&gt;-->
+  <!--&lt;!&ndash;  <link rel="stylesheet" href="css/style.min.css">&ndash;&gt;-->
 </head>
 <body>
-  <h1>Smart Device</h1>
+<div style="display: none;">
+  <include src="build/img/sprite_auto.svg"></include>
+</div>
+<header class="header">
+  <div class="header-wrapper">
+    <div class="header-content">
+      <div class="avator">
+        <img src="/img/avator.jpg" alt="Аваторка">
+        <p>Константин</p>
+      </div>
+      <label class="search">
+        <input type="text" placeholder="Поиск"/>
+      </label>
+      <div class="message-status">
+        <div class="message-count">
+          <span>4</span>
+        </div>
+        <svg width="12.77" height="10.21">
+          <use xlink:href="#icon-mail"></use>
+        </svg>
+      </div>
+    </div>
+    <h1>Личный кабинет</h1>
+  </div>
+  <nav class="menu">
+    <button type="button" class="menu-toglle"></button>
+    <ul class="menu-list">
+      <li>
+        <svg width="12" height="8">
+          <use xlink:href="#icon-looked"></use>
+        </svg>
+        <a class="menu-link" href="#">Просмотренное</a></li>
+      <li>
+        <svg width="10" height="10">
+          <use xlink:href="#icon-saved"></use>
+        </svg>
+        <a class="menu-link" href="#">Сохраненное</a></li>
+      <li>
+        <svg width="10" height="10">
+          <use xlink:href="#icon-my-posts"></use>
+        </svg>
+        <a class="menu-link" href="#">Мои посты</a></li>
+      <li>
+        <svg width="10" height="10">
+          <use xlink:href="#icon-commented"></use>
+        </svg>
+        <a class="menu-link active" href="#">Прокомментированное</a></li>
+    </ul>
+    <button class="btn btn-close" type="button">Закрыть</button>
+  </nav>
+</header>
+<main class="main">
+  <div class="main-content">
+    <section class="cards">
+      <ul class="cards-list">
+        <li class="card">
+          <div class="card-content">
+            <div class="card-header-wrapper">
+              <header class="card-header">
+                <div class="card-wrapper">
+                  <img src="/img/avator.jpg" alt="Аваторка карточки">
+                  <p class="card-name">Константин Кодов</p>
+                  <time class="card-time" datetime="2001-05-15 19:00"><span>опубликовано&nbsp;</span>8 часов назад</time>
+                </div>
+                <button class="btn ellipsis" type="button">
+                  <span class="visually-hidden">Вызов меню карточки</span>
+                  <svg width="20" height="5">
+                    <use xlink:href="#icon-menu-card"></use>
+                  </svg>
+                </button>
+              </header>
+              <h2 class="card-title">Реплицированные с зарубежных источников возможности </h2>
+            </div>
+            <img class="card-image" src="/img/image-card-1.jpg" alt="Картинка 1">
+            <footer class="footer-card">
+              <div class="wrapper-like">
+                <button type="button" class="btn button-like">
+                  <span class="visually-hidden">Like</span>
+                  <svg width="19" height="10">
+                    <use xlink:href="#icon-like"></use>
+                  </svg>
+                </button>
+                <p class="likes-count">101</p>
+                <button type="button" class="btn button-dislike">
+                  <span class="visually-hidden">Dislike</span>
+                  <svg width="19" height="10">
+                    <use xlink:href="#icon-dislike"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="comments-wrapper">
+                <button type="button" class="btn btn-comments">
+                  <span class="visually-hidden">Показать комментарии</span>
+                  <svg class="icon-comments" width="14.17" height="14.17">
+                    <use xlink:href="#icon-comments"></use>
+                  </svg>
+                </button>
+                <p class="comments-count"><span>14</span><span>Комментарий</span></p>
+              </div>
+              <div class="card-control">
+                <button type="button" class="btn btn-statistics">
+                  <span class="visually-hidden">Показать статистику</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-statistics"></use>
+                  </svg>
+                </button>
+                <button type="button" class="btn btn-shared">
+                  <span class="visually-hidden">Поделиться</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-shared"></use>
+                  </svg>
+                </button>
+                <button type="button" class="btn btn-delete">
+                  <span class="visually-hidden">Удалить</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-delete"></use>
+                  </svg>
+                </button>
+
+              </div>
+
+
+            </footer>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </div>
+
+</main>
+
 </body>
 </html>
